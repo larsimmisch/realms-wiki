@@ -55,7 +55,7 @@ class User(BaseUser):
         logging.getLogger("realms.auth.ldap").debug("Logged in: {}".format(repr(user)))
 
         user.save()
-        login_user(user, remember=False)
+        login_user(user, remember=True)
         return user
 
     @classmethod
